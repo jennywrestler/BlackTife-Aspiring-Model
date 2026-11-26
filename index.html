@@ -1,1 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>BlackTife | Official Model Portfolio</title>
+
+<meta name="description" content="Meet BlackTife, an aspiring model based in Lagos, Nigeria. Open to modelling collaborations, photography, fashion and brand opportunities.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #090909;
+    --gold: #d5b77a;
+    --white: #ffffff;
+    --grey: #aaaaaa;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(9,9,9,0.96);
+    border-bottom: 1px solid #292929;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #ddd;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 65px 8%;
+    gap: 45px;
+}
+
+.hero-text span {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 1.05;
+    margin: 20px 0;
+    letter-spacing: -3px;
+}
+
+.hero h1 em {
+    color: var(--gold);
+    font-style: normal;
+}
+
+.hero p {
+    color: #bbb;
+    max-width: 480px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    height: 570px;
+    overflow: hidden;
+    border: 1px solid #5a4930;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 27px;
+    background: var(--gold);
+    color: #090909;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 7px 8px 7px 0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.section-label {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.about {
+    background: #111;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about-content p {
+    color: #bbb;
+    font-size: 17px;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    background: #171717;
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+.opportunities {
+    background: #111;
+    text-align: center;
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.opportunity {
+    border: 1px solid #39322a;
+    padding: 30px 15px;
+}
+
+.opportunity h3 {
+    color: var(--gold);
+    font-size: 16px;
+}
+
+.opportunity p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    color: var(--gold);
+    font-size: 17px;
+    display: block;
+    margin: 15px;
+}
+
+footer {
+    background: #050505;
+    border-top: 1px solid #292929;
+    text-align: center;
+    padding: 35px 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+@media(max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+    }
+
+    .hero-image {
+        height: 480px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 450px;
+    }
+
+    .opportunity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+}
+
+@media(max-width: 380px) {
+    .opportunity-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">BLACKTIFE ✨</div>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#portfolio">PORTFOLIO</a>
+<a href="#collaborate">COLLABORATE</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+</header>
+
+<!-- HOMEPAGE -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<span>OFFICIAL MODEL PORTFOLIO</span>
+
+<h1>
+BLACK<em>TIFE</em>
+</h1>
+
+<p>
+Aspiring Model based in Lagos, Nigeria.
+Passionate about fashion, creativity,
+photography and self-expression.
+
+Starting small, dreaming big.
+Let's create something beautiful together.
+</p>
+
+<a href="#portfolio" class="btn">
+EXPLORE PORTFOLIO
+</a>
+
+<a href="https://wa.me/2348023280646"
+class="btn btn-outline">
+LET'S COLLABORATE
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="069e4a15-811a-4eda-9de3-be74a967f55a.jpeg"
+alt="BlackTife modelling portrait">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-content">
+
+<div class="section-label">GET TO KNOW ME</div>
+
+<h2 class="section-title">ABOUT BLACKTIFE</h2>
+
+<p>
+Hi, I'm BlackTife ✨
+
+An aspiring model based in Lagos, Nigeria,
+with a passion for creativity, fashion,
+photography and artistic expression.
+
+I'm building my journey in the modelling
+world, connecting with creative people
+and exploring exciting opportunities.
+
+I believe every great journey starts
+somewhere. I'm starting small,
+dreaming big and looking forward to
+everything ahead.
+
+Let's create and grow together. 🤍
+</p>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="gallery" id="portfolio">
+
+<div class="section-label">MY VISUAL WORLD</div>
+
+<h2 class="section-title">THE PORTFOLIO</h2>
+
+<p style="color:#aaa;">
+A collection of my modelling photographs
+and creative expressions.
+</p>
+
+<div class="gallery-grid">
+
+<img src="069e4a15-811a-4eda-9de3-be74a967f55a.jpeg"
+alt="BlackTife portfolio photograph 1">
+
+<img src="7f210d78-540b-48b3-ae04-cce63f0014d0.jpeg"
+alt="BlackTife portfolio photograph 2">
+
+<img src="84192bfe-3961-449a-9c86-f9c2448a00b2.jpeg"
+alt="BlackTife portfolio photograph 3">
+
+<img src="cd131eeb-3654-421a-b839-3a010eaca7c8.jpeg"
+alt="BlackTife portfolio photograph 4">
+
+</div>
+
+</section>
+
+<!-- COLLABORATIONS -->
+
+<section class="opportunities" id="collaborate">
+
+<div class="section-label">LET'S WORK TOGETHER</div>
+
+<h2 class="section-title">
+OPEN TO COLLABORATIONS
+</h2>
+
+<p style="color:#aaa;">
+I'm excited to connect with creative
+individuals and brands.
+</p>
+
+<div class="opportunity-grid">
+
+<div class="opportunity">
+<h3>PHOTOGRAPHERS</h3>
+<p>Let's create beautiful visual stories.</p>
+</div>
+
+<div class="opportunity">
+<h3>MAKEUP ARTISTS</h3>
+<p>Let's bring creative beauty ideas to life.</p>
+</div>
+
+<div class="opportunity">
+<h3>STYLISTS</h3>
+<p>Fashion, style and creative expression.</p>
+</div>
+
+<div class="opportunity">
+<h3>BRANDS</h3>
+<p>Open to exciting brand collaborations.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="section-label">GET IN TOUCH</div>
+
+<h2 class="section-title">
+LET'S CREATE TOGETHER
+</h2>
+
+<p>
+Interested in collaborating, working together
+or discussing an opportunity?
+
+I'd love to hear from you.
+</p>
+
+<a href="https://wa.me/2348023280646"
+class="btn">
+CHAT ON WHATSAPP
+</a>
+
+<a href="mailto:ayanfeogundairo2005@gmail.com"
+class="btn btn-outline">
+SEND AN EMAIL
+</a>
+
+<a class="contact-email"
+href="mailto:ayanfeogundairo2005@gmail.com">
+ayanfeogundairo2005@gmail.com
+</a>
+
+<p>Lagos, Nigeria | Available for Collaborations</p>
+
+</section>
+
+<footer>
+
+<div class="logo">BLACKTIFE ✨</div>
+
+<p>
+Starting Small. Dreaming Big.
+</p>
+
+<p>
+© 2026 BlackTife. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
